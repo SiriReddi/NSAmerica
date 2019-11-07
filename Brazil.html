@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>Brazil</title>
+        <meta name="author" content="">
+        <link rel="stylesheet" href="./styles/travel.css">
+    </head>
+    <body>
+            <nav>
+                <!--below these are my nav bar links that will open in another tap-->
+                <ul class="nav">
+                    <li><a href="https://www.lonelyplanet.com/brazil/rio-de-janeiro" target="_blank">Rio De Janerio</a></li>
+                    <li><a href="https://www.lonelyplanet.com/brazil/bahia" target="_blank"> Bahia</a></li>
+                    <li><a href="https://www.lonelyplanet.com/brazil/the-south/foz-do-iguacu" target="_blank">Foz do Iguacu</a></li>
+                    <li><a href="https://www.chimuadventures.com/blog/2016/10/culture-and-customs-of-brazil/" target="_blank">Culture</a></li>
+                    <li><a href="welcome.html">Home</a></li>
+                    <li><a href="https://brazilian.report/" target="_blank">The Brazilian Report</a></li>
+                </ul>    
+                </nav>
+                <!-- My grid is wrapped in flexbox, and it allows my grid to be responsive.
+                 Also below is the grid that holds the images in main.-->
+                <div class="flexbox">
+        <main class="grid">
+              
+                <div class="image1" id="Rio de Janerio" >
+                    <img  class="image1img" src="images/Christ-the-Redeemer-980x613.jpg">
+                </div>
+                <div class="image2" id="Rio De Janerio" >
+                    <img class="image2" src="images/Escalera coloridas-Selaron5-.jpeg">
+                </div>
+                <div class="image3"  id="Bahia">
+                    <img class="image3" src="images/salvador-brazil-postcard.webp">
+                </div>
+                <div class="image4" id="Bahia City">
+                    <img class="image4" src="images/Bahia-street.jpg">
+                </div>
+                <div class="image5" id="Foz do Iguacu" >
+                    <img class="image5" src="images/foz-iguazufalls.jpg">     
+                </div>
+                    
+            </main>
+          <!--below is the info-box that is positioned to the right og the website, this will be link with the weatherapi-->
+        <div class="info-box">
+                <div class="weather-box" id="weatherBox">
+                    <p class="city-name" id="cityName">
+                      
+                    </p>
+                    <p class="day1" id="day1">
+                       
+                    </p>
+                    <ul class="condition-list">
+                        <li id="precipitation"></li>
+                        <li id="humidity"></li>
+                        <li id="windSpeed"></li>
+                        <li id="highLow"></li>
+                    </ul>
+                    <p class="day2" id="day2"><span class="days" id="day2Name"></br></span></p>
+                    <p class="day3" id="day3"><span class="days" id="day3Name"></br></span></p>
+                    <p class="day4" id="day4"><span class="days" id="day4Name"></br></span></p>
+                    <p class="day5" id="day5"><span class="days" id="day5Name"></br></span></p>
+                    <p class="ext-forecast">Extended Forecast</p>
+                </div>
+                <div class="location-box">
+        ​           <ul>
+                <li class="home" id ="City">Home</li> 
+                <li class="Flights"><a id ="Flights" style="text-decoration: none" target="_blank">Flights</a></li>
+                <li class="Accomodations"><a id ="Accomodations" style="text-decoration: none" target="_blank">Accomodations</a></li>
+                <li class="Restaurants"><a id ="Restaurants" style="text-decoration: none" target="_blank">Restaurants</a></li>
+                <li class="MainAttractions"><a id ="MainAttractions" style="text-decoration: none" target="_blank">MainAttractions</a></li>
+                <li class="Tours"><a id ="Tours" style="text-decoration: none" target="_blank">Tours</a></li>
+                <li class="Shopping"><a id ="Shopping" style="text-decoration: none" target="_blank">Shopping</a></li>
+                  
+                    </ul>
+
+                </div>
+                <div class="currency-box">
+        ​
+        <div class="currency-box">
+                <form class="form-box" id="currencyForm">
+                <div class="trip-box">
+                        <label class="travelers">Guest Number:</label>
+                        <input type="number" step="1" value="1" min="1" class="traveler-number" id="travelerNumber">
+                        <label class="nights">Nights Visiting:</label>
+                        <input type="number" step="1" class="nights-number" value="1" min="1" id="nightsNumber">
+                    </div>  
+                    <div class="currency-input-column">
+                        <label class="label">Input your currency:</label>
+                        <input list="currencyinput" class="currency-input" id="userCurrency">
+                        <datalist id="currencyinput">
+                            <option value="USD">United States Dollar</option>
+                            <option value="CAD">Canadian Dollar</option>
+                            <option value="HKD">Hong Kong Dollar</option>
+                            <option value="ISK">Icelandic Króna</option>
+                            <option value="PHP">Philippine Peso</option>
+                            <option value="DKK">Danish Krone</option>
+                            <option value="HUF">Hungarian Forint</option>
+                            <option value="CZK">Czech Koruna</option>
+                            <option value="GBP">Pound Sterling</option>
+                            <option value="RON">Romanian Leu</option>
+                            <option value="SEK">Swedish Krona</option>
+                            <option value="IDR">Indonesian Rupiah</option>
+                            <option value="INR">Indian Rupee</option>
+                            <option value="BRL">Brazilian Real</option>
+                            <option value="RUB">Russian Ruble</option>
+                            <option value="HRK">Croatian Kuna</option>
+                            <option value="JPY">Japanese Yen</option>
+                            <option value="THB">Thai Baht</option>
+                            <option value="CHF">Swiss Franc</option>
+                            <option value="EUR">Euro</option>
+                            <option value="MYR">Malaysian Ringgit</option>
+                            <option value="BGN">Bulgarian Lev</option>
+                            <option value="TRY">Turkish Lira</option>
+                            <option value="CNY">Chinese Yuan</option>
+                            <option value="NOK">Norwegian Krone</option>
+                            <option value="NZD">New Zealand Dollar</option>
+                            <option value="ZAR">South African Rand</option>
+                            <option value="MXN">Mexican Peso</option>
+                            <option value="SGD">Singapore Dollar</option>
+                            <option value="AUD">Australian Dollar</option>
+                            <option value="ILS">Israeli New Shekel</option>
+                            <option value="KRW">South Korean Won</option>
+                            <option value="PLN">Poland Zloty</option>
+                        </datalist>
+                    </div>
+                    <input type="submit" value="Calculate" class="calculate">
+                    <label class="description">Description</label>
+                    <label class="avg-cost">Avg Cost BRL</label>
+                    <label class="cost-tab">Cost in RON</label>
+                    <div class="hotel">
+                        <label for="hotel"class="hotel-name">Hotel</label>
+                    </div>
+                    <div class="food">
+                        <label for="food" class="food-name">Food</label>
+                    </div>
+                    <div class="entertainment">>
+                        <label for="entertainment" class="entertainment-name">Entertainment</label>
+                    </div>
+                    <div class="transportation"> 
+                        <label for="transportation" class="transportation-name">Transportation</label>
+                    </div>
+                        <label class="hotel-us-cost" id="hotelBrazilCost">$600</label>
+                        <label class="food-us-cost" id="foodBrazilCost">$300</label>
+                        <label class="entertainment-us-cost" id="entertainmentBrazilCost">$400</label>
+                        <label class="transportation-us-cost" id="transportationBrazilCost">$600</label>
+                        <label class="hotel-user-cost" id="hotelUserCost">1200RON</label>
+                        <label class="food-user-cost" id="foodUserCost">1500RON</label>
+                        <label class="entertainment-user-cost" id="entertainmentUserCost">600RON</label>
+                        <label class="transportation-user-cost" id="transportationUserCost">900RON</label>
+                </form>
+    
+            </div>
+                </div>
+        </div> 
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="scripts/travel.js"></script>
+    </body>
+    
+</html>

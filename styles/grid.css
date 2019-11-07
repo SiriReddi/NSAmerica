@@ -1,0 +1,734 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+
+
+body {
+  /* background: #212121; */
+  background-image: url("../images/architecture-astrophotography-buildings-670269.jpg");
+  background-size: cover;
+	font-size: 20px;
+	line-height: 32px;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	/* word-wrap:break-word !important; */
+  font-family: 'Open Sans', sans-serif;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+	}
+
+h1 {
+	font-size: 60px;
+	text-align: center;
+	color: #FFF;
+}	
+
+h3 {
+	font-size: 30px;
+	line-height: 34px;
+	text-align: center;
+	color: #FFF;
+}
+
+h3 a {
+	color: #FFF;
+}
+
+a {
+	color: #FFF;
+}
+
+h1 {
+	margin-top: 100px;
+	text-align:center;
+	font-size:60px;
+	line-height: 70px;
+	font-family: 'Bree Serif', 'serif';
+	}
+
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+p {
+	text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	/* background-color: black; */
+}
+
+#logo {
+	display: block;
+	padding: 0 30px;
+	float: left;
+	font-size:20px;
+	line-height: 30px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	/* float: left; */
+	background-color: black;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+    display:inherit; 
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.*/
+
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ''; }
+/*li > a:only-child:after { content: ''; } */
+
+
+.main-content{
+	display:flex;
+}
+.grid-content{
+	display:grid;
+	grid-template-columns: 100px 100px 100px;
+	grid-template-rows: 405px 405px;
+	width: 100%;
+}
+.img-content {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    align-items: center;
+	position: relative;
+	grid-column-start: 2;
+	padding-inline-start: 0;
+}
+.img-content li{
+        flex-grow: 1;
+        flex-basis: 320px;
+        position:relative;
+        max-width: 640px;
+        flex-shrink: 0;
+        padding:0;
+        margin: 0;
+        width:100%;  
+}
+.img-content ul{
+  margin:0;
+}
+.img-content li img{
+    width:94%;
+    padding-inline-start: 0;
+}
+.info-box {
+  display: grid;
+  grid-template-columns: 300px;
+  grid-template-rows: 270px 240px 260px;
+  float:right;
+  grid-row-gap: 10px;
+  border: 1px solid black;
+  background-color: #1a1e21
+}
+.weather-box {
+  background-image: url("../images/weather.jpeg");
+  background-size: cover;
+  display:grid;
+  justify-self: center;
+  grid-template-columns: 64px 64px 64px 64px; 
+  grid-template-rows: 50px 110px 60px 50px;
+  color:white;
+}
+.city-name {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(33, 40, 46, 0.4)
+}
+
+.day1 {
+  grid-column-start: 1;
+  grid-column-end:2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 125px;
+  font-size: 40px;
+  border-bottom: 1px solid white;
+  margin: 0 auto;
+}
+.condition-list {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  width: 125px;
+  font-size: 16px;
+  list-style: none;
+  border-bottom: 1px solid white;
+  margin:0 auto;
+  padding: 0;
+  line-height: 25px;
+}
+.day2 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start:3;
+  grid-row-end:3;
+  /* width:65px;
+  padding: 20px; */
+  text-align: center;
+}
+.day3 {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start:3;
+  grid-row-end:3;
+  /* width:65px;
+  padding: 20px; */
+  text-align: center;
+}
+.day4 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start:3;
+  grid-row-end:3;
+  /* width: 65px;
+  padding: 20px; */
+}
+.day5 {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start:3;
+  grid-row-end:3;
+  /* width: 65px;
+  padding: 20px; */
+}
+.days {
+  font-size: 12px;
+  text-align: center;
+}
+.ext-forecast {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end:4;
+  text-align: center;
+  width:250px;
+  align-self: center;
+  border-top: 1px solid white;
+  margin-top: 50px;
+  padding-top: 0.5px;
+  font-size: 13px;
+}
+.categories {
+  grid-column-start:1;
+  grid-row-start: 2;
+  
+}
+.categories{
+  grid-template-columns: 256px; 
+  grid-template-rows: 50px 50px 50px 50px 50px; 
+  display: grid;
+  justify-self: center;
+}
+.list{
+	padding-inline-start: 0.5px;
+	
+}
+.home {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:1;
+	grid-row-end:1;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	background-color: lightcoral;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+  .attractions {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:2;
+	grid-row-end:2;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	text-decoration: none;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+  .adventures {
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:3;
+	grid-row-end:3;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	text-decoration: none;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+  .shop{
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:4;
+	grid-row-end:4;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+  .restaurant{
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:5;
+	grid-row-end:5;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+  .stay{
+	grid-column-start: 1;
+	grid-column-end: 1;
+	grid-row-start:6;
+	grid-row-end:6;
+	text-align: center;
+	list-style:none;
+	width:250px;
+	background-color: gray;
+	border: 1px solid black;
+	font-size: 16px;
+  }
+
+.search-box input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
+  border: solid 3px lightblue;
+  outline: none;
+  border-radius: 35px;
+  box-shadow: 0 1px #0091c2;
+  transition: width 0.5s;
+}
+
+.search-box input::placeholder {
+  color: red;
+  opacity: 1;
+}
+.search-box input::placeholder {
+  color: red;
+}
+.search-box input::placeholder {
+  color: #efefef;
+}
+.search-box input:focus,
+.search-box input:valid {
+  width: auto;
+}
+.currency-box {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-image: url("../images/astronomy-comet-constellation-631477.jpg");
+    background-size: cover;
+}
+.form-box {
+    display:grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 41px 41px 41px 41px 41px 41px;
+    border: 1px solid black;
+}
+.form-box *{
+    font-size: 12px;
+    color: white;
+    
+}
+.trip-box {
+    display:grid;
+    grid-row: 1;
+    grid-column: 1;
+    grid-template-columns: auto;
+    grid-template-rows: 20.5px 20.5px;
+}
+.nights-number {
+    grid-row: 2;
+    grid-column: 2;
+    width: 30px;
+    background-color: rgba(35, 42, 48, .4);
+    border-radius: 10px;
+}
+.traveler-number {
+    grid-row: 1;
+    grid-column: 2;
+    width: 30px;
+    background-color: rgba(35, 42, 48, .4);
+    border-radius: 10px;
+}
+.travelers {
+    grid-row: 1;
+    grid-column: 1;
+}
+.nights {
+    grid-row: 2;
+    grid-column: 1;
+}
+.currency-input-column {
+    display:grid;
+    grid-row:1;
+    grid-column: 2;
+    grid-template-columns: auto;
+    grid-template-rows: 20.5px 20.5px;
+    
+}
+.label {
+    grid-row: 1;
+    width: 100%;
+    font-size: 13px;
+}
+.currency-input {
+    grid-row: 2;
+    width: 100%;
+    background-color: rgba(35, 42, 48, .4);
+    border-radius: 10px;
+}
+.calculate {
+    grid-column: 3;
+    grid-row: 1;
+    height:50%;
+    width: 60%;
+    margin-left:auto;
+    margin-right: auto;
+    display:block;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(35, 42, 48, .4)
+}
+.calculate{
+  padding: 0;
+}
+.description {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 12px;
+    /* margin-top: 10px; */
+    align-self: center
+}
+.avg-cost {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 12px;
+    /* margin-top: 10px; */
+    align-self: center;
+}
+.cost-tab {
+    grid-row:2;
+    grid-column: 3;
+    font-size: 12px;
+    /* margin-top: 10px; */
+    align-self: center;
+}
+.hotel {
+    display:grid;
+    grid-row:3;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+.hotel-box, .entertainment-box, .food-box, .transportation-box {
+    grid-row: 1;
+    grid-column: 2;
+    height:80%;
+    justify-self: right;
+}
+.hotel-name, .food-name, .transportation-name, .entertainment-name {
+    grid-row:1;
+    grid-column: 1;
+    padding: 0.5px;
+    
+}
+.food {
+    display:grid;
+    grid-row:4;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+.food-name {
+    grid-row: 1;
+    grid-column: 1
+}
+.entertainment {
+    display:grid;
+    grid-row:5;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+.transportation {
+    display: grid;
+    grid-row: 6;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+.hotel-us-cost, .food-us-cost, .entertainment-us-cost, .transportation-us-cost {
+    grid-column: 2;
+    
+    /* padding-top: 10px;
+    padding-left: 20px */
+} 
+.hotel-us-cost {
+    grid-row: 3;
+}
+.food-us-cost {
+    grid-row: 4;
+}
+.entertainment-us-cost {
+    grid-row: 5;
+}
+.transportation-us-cost {
+    grid-row: 6;
+}
+.hotel-user-cost, .food-user-cost, .transportation-user-cost, .entertainment-user-cost {
+    grid-column: 3;
+    /* padding-top: 10px; */
+}
+.hotel-user-cost {
+    grid-row: 3;
+    grid-column: 3;
+}
+.food-user-cost {
+    grid-row:4;
+    grid-column:3;
+}
+.entertainment-user-cost {
+    grid-row: 5;
+    grid-column: 3;
+    margin:0;
+}
+​.transportation-user-cost {
+    grid-row-start: 6;
+    grid-row-end: 6;
+    grid-column: 3;
+    margin: 0;
+    padding:0;
+    width:auto;
+}
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+    float: left;
+	}
+
+	nav {
+		margin: 0;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+    display: none;
+    float:left;
+	}
+	nav ul{
+		float:left;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: black;
+		padding:8px 10px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+    border:none;
+    float:left;
+    justify-self: left;
+	}
+
+	.toggle:hover {
+		background-color: #000000;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+        display: block;
+        
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 30px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #000000;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:8px 10px;	
+		color:#FFF;
+    font-size:17px; 
+    
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+    background-color: #212121; 
+   
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+	.main-content{
+		display:flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 80%;
+	}
+
+}

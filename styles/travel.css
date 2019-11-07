@@ -1,0 +1,521 @@
+/* Main nav bar with that span across the top of webpage with each button connected to a link. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+nav ul {
+    background-color: #333;
+    /* float:right; */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+
+}
+nav ul li {
+    margin: 0px;
+    /* display: inline-block; */
+    
+}
+nav a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+
+}
+
+main {
+    padding-top: 35px;
+    width: 80%;
+    margin: auto; 
+    background-color: #dddddd;
+}
+
+
+/* images of Brazil ina grid */
+.block img {
+    max-width: 640px;
+    flex-grow: 1;
+    flex-basis: 320px;
+    flex-shrink: 0;
+    position: relative;
+    transition: box-shadow 0.3s;
+    animation:fadeIn 2.5s ease;
+    border-radius: 20px;
+    padding: 4.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+}
+/* below is the grid class that creates a grid for images */
+.grid {
+    display: grid;
+    /* grid-template-rows: 200px 400px; */
+    grid-template-rows: 50% 50%;
+
+    /* grid-template-columns: 200px 350px 200px; */
+    grid-template-columns: 25% 50% 25%;
+    width: 100%;
+    margin-left: 50px;
+    
+}
+/* Centered text */
+/*  each image is  */
+.image1 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    grid-row-end: 1;
+    grid-column-end: 3;
+    /* Centered text */
+  
+   /* width: 550px; */
+   /* /height: 200px;  */
+   overflow: hidden;
+
+}
+.image1img {
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+
+}
+.image2 {
+    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-row-end: 1; 
+    grid-column-end: 3;
+    width: 100%;
+    height: 100%;
+}
+.image3 {
+    grid-row-start: 2;
+    grid-column-start:1;
+    grid-row-end: 2; 
+    grid-column-end: 1;
+    width: 100%;
+    height: 87.2%;
+}
+.image4 {
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 2; 
+    grid-column-end: 2;
+    width: 100%;
+    height: 87.2%;
+}
+.image5 {
+    grid-row-start: 2;
+    grid-column-start: 3;
+    grid-row-end: 2; 
+    grid-column-end: 3;
+    width: 100%;
+    height: 87.2%;
+}
+.flexbox {
+    display: flex;
+}
+.info-box {
+    display: grid;
+    grid-template-columns: 322px;
+    grid-template-rows: 250px 370px 250px;
+    float:right;
+    border: 1px solid black;
+    background-color: #1a1e21; 
+    background-size: cover;
+    /* width: 20%; */
+    
+
+}
+.weather-box {
+    background-image: url("../images/dawn-evening-gradation-1544880.jpg");
+    background-size: cover;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 62.5px 62.5px 62.5px 62.5px; 
+    grid-template-rows: 25px 100px 60px 25px;
+    color:white;
+    
+}
+.city-name {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    width: 250px;
+    text-align: center;
+    background-color: rgba(33, 40, 46, 0.4)
+}
+.day1 {
+    grid-column-start: 1;
+    grid-column-end:2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 125px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+    border-bottom: 1px solid white
+}
+.condition-list {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    width: 125px;
+    contain: content;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid white
+}
+.day2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start:3;
+    grid-row-end:3;
+    width:auto;
+    padding: 20px;
+}
+.day3 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start:3;
+    grid-row-end:3;
+    width:auto;
+    padding: 20px;
+}
+.day4 {
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start:3;
+    grid-row-end:3;
+    width: auto;
+    padding: 20px;
+}
+.day5 {
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start:3;
+    grid-row-end:3;
+    width: auto;
+    padding: 20px;
+}
+.days {
+    font-size: 12px;
+    text-align: center;
+}
+.ext-forecast {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start:4;
+    grid-row-end:4;
+    text-align: center;
+    width:250px;
+    align-self: center;
+    border-top: 1px solid white;
+    margin-top: 50px;
+    padding-top: 10px;
+    font-size: 12px;
+}
+.location-box {
+    grid-column-start:1;
+    grid-row-start: 2;
+    
+    list-style: none;
+    justify-items: center;
+    
+}
+ul{
+    list-style-type:none;
+    padding-inline-start: 0px;
+    margin: 0px:
+
+}
+.home{ 
+    grid-row: auto;
+    background-color: #c89489;
+    list-style: none;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+.Flights {
+    grid-row: auto;
+    background-color: #b8b3b3;
+    list-style: none;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+
+    
+}
+.Accomodations{
+    background-color: #b8b3b3;
+    list-style: none;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+.Restaurants{
+    background-color:#b8b3b3;
+    list-style:none;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+.MainAttractions{
+    background-color: #b8b3b3;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+.Tours{
+    background-color: #b8b3b3;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+}
+.Shopping{
+    background-color: #b8b3b3;
+    margin:10px;
+    padding: 10px;
+    text-align: center;
+    
+}
+.currency-box {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    border: 1px solid black;
+}
+
+.currency-box {
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-image: url("../images/astronomy-comet-constellation-631477\ \(1\).jpg");
+    background-size: cover;
+
+}
+
+.form-box {
+    display:grid;
+    grid-template-columns: 116px 116px 116px;
+    grid-template-rows: 41px 41px 41px 41px 41px 41px;
+    border: 1px solid black;
+}
+
+.form-box *{
+    font-size: 12px;
+    color: white
+}
+
+.trip-box {
+    display:grid;
+    grid-row: 1;
+    grid-column: 1;
+    grid-template-columns: auto;
+    grid-template-rows: 20.5px 20.5px;
+}
+
+
+.nights-number {
+    grid-row: 2;
+    grid-column: 2;
+    width: 30px;
+    background-color: rgba(35, 42, 48, .4)
+}
+
+.traveler-number {
+    grid-row: 1;
+    grid-column: 2;
+    width: 30px;
+    background-color: rgba(35, 42, 48, .4)
+}
+
+.travelers {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.nights {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.currency-input-column {
+    display:grid;
+    grid-row:1;
+    grid-column: 2;
+    grid-template-columns: auto;
+    grid-template-rows: 20.5px 20.5px;
+    
+}
+label {
+    grid-row: 1;
+    width: 100%;
+    font-size: 13px;
+}
+
+.currency-input {
+    grid-row: 2;
+    width: 100%;
+    background-color: rgba(35, 42, 48, .4)
+}
+
+.calculate {
+    grid-column: 3;
+    grid-row: 1;
+    height:50%;
+    width: 50%;
+    /* margin-left:auto; */
+    margin-right: auto;
+    display:block;
+    /* margin-top: 10px; */
+    border-radius: 50%;
+    background-color: rgba(35, 42, 48, .4)
+}
+
+.description {
+    grid-row: 2;
+    grid-column: 1;
+    font-size: 15px;
+    margin-top: 10px;
+    align-self: center
+}
+
+.avg-cost {
+    grid-row: 2;
+    grid-column: 2;
+    font-size: 15px;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.cost-tab {
+    grid-row:2;
+    grid-column: 3;
+    font-size: 15px;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.hotel {
+    display:grid;
+    grid-row:3;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+
+.hotel-box, .entertainment-box, .food-box, .transportation-box {
+    grid-row: 1;
+    grid-column: 2;
+    height:90%;
+    justify-self: right;
+}
+
+.hotel-name, .food-name, .transportation-name, .entertainment-name {
+    grid-row:1;
+    grid-column: 1;
+    padding: 10px;
+    
+}
+.food {
+    display:grid;
+    grid-row:4;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+
+.food-name {
+    grid-row: 1;
+    grid-column: 1
+}
+
+.entertainment {
+    display:grid;
+    grid-row:5;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+
+.transportation {
+    display: grid;
+    grid-row: 6;
+    grid-column: 1;
+    grid-template-columns: 58px 58px;
+    grid-template-rows: 41px;
+}
+
+.hotel-us-cost, .food-us-cost, .entertainment-us-cost, .transportation-us-cost {
+    grid-column: 2;
+    padding-top: 10px;
+    padding-left: 40px
+} 
+
+.hotel-us-cost {
+    grid-row: 3;
+}
+
+.food-us-cost {
+    grid-row: 4;
+}
+
+.entertainment-us-cost {
+    grid-row: 5;
+}
+
+.transportation-us-cost {
+    grid-row: 6;
+}
+
+.hotel-user-cost, .food-user-cost, .transportation-user-cost, .entertainment-user-cost {
+    grid-column: 3;
+    padding-top: 10px;
+}
+
+.hotel-user-cost {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.food-user-cost {
+    grid-row:4;
+    grid-column:3;
+}
+
+.entertainment-user-cost {
+    grid-row: 5;
+    grid-column: 3;
+}
+
+.transportation-user-cost {
+    grid-row: 6;
+    grid-column: 3;
+}
+
+
+
+@media all and (max-width: 768px){
+    .flexbox{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
